@@ -11,6 +11,8 @@ end
 
 module OctoberShruthi
   class Application < Rails::Application
+
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
@@ -40,6 +42,9 @@ module OctoberShruthi
     config.filter_parameters += [:password]
 
     # Enable escaping HTML in JSON.
+
+    config.assets.initialize_on_precompile = false
+    
     config.active_support.escape_html_entities_in_json = true
 
     # Use SQL instead of Active Record's schema dumper when creating the database.
